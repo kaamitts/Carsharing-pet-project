@@ -6,7 +6,6 @@ venv/
 *.pyc
 *.pyo
 *.pyd
-*.db  # Игнорировать файлы баз данных (например, db.sqlite3, если есть)
 
 # Angular
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
