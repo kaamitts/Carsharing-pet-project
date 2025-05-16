@@ -1,0 +1,69 @@
+# Django
+__pycache__/
+venv/
+.env
+
+*.pyc
+*.pyo
+*.pyd
+*.db  # Игнорировать файлы баз данных (например, db.sqlite3, если есть)
+
+# Angular
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors (Windows-specific and general)
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sln
+*.suo
+*.csproj
+*.vcxproj
+*.user
+
+# Visual Studio Code (Windows-specific)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Angular development files (source code should be tracked, adjust if needed)
+# !src/  # Разкомментируйте, если хотите отслеживать исходники Angular
+
+# Miscellaneous
+.angular/cache/
+sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+
+# System files (Windows-specific)
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# Windows temporary files
+*.bak
+*.tmp
+~$*

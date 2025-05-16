@@ -1,0 +1,24 @@
+<div *ngIf="car" class="car-detail">
+  <h1>{{ car.name }}</h1>
+  <img *ngIf="car.image" [src]="car.image" alt="{{ car.name }}" class="car-image">
+  <p>{{ car.description }}</p>
+
+  <h3>Specifications</h3>
+  <ul>
+    <li *ngIf="car.specifications.engine"><strong>Engine:</strong> {{ car.specifications.engine }}</li>
+    <li *ngIf="car.specifications.fuelType"><strong>Fuel Type:</strong> {{ car.specifications.fuelType }}</li>
+    <li *ngIf="car.specifications.transmission"><strong>Transmission:</strong> {{ car.specifications.transmission }}</li>
+    <li *ngIf="car.specifications.seats"><strong>Seats:</strong> {{ car.specifications.seats }}</li>
+    <li *ngIf="car.specifications.features">
+      <strong>Features:</strong>
+      <ul>
+        <li *ngFor="let f of car.specifications.features">{{ f }}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="price">Price: ${{ car.price_per_day }}/day</div>
+
+  <button class="book-btn" (click)="bookCar()">Book</button>
+  <p class="msg" *ngIf="bookingMessage">{{ bookingMessage }}</p>
+</div>

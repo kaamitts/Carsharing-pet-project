@@ -1,0 +1,15 @@
+<h2>User Profile</h2>
+<p>Name: {{ user?.username }}</p>
+<p>Email: {{ user?.email }}</p>
+<h2>Booking History</h2>
+
+<ul *ngIf="rentals && rentals.length">
+  <li *ngFor="let rental of rentals">
+    Car: {{ rental.car.name }}<br>  
+    Status: {{ rental.status }}<br>
+    Date: {{ rental.created_at | date:'medium' }}<br>
+    <button (click)="deleteRental(rental.id)">Delete</button>
+  </li>
+</ul>
+
+<p *ngIf="rentals && !rentals.length">No bookings yet.</p>
